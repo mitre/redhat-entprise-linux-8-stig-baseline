@@ -10,7 +10,7 @@ verifier:
       path: .
   input_files:
     - kitchen.inputs.yml
-       load_plugins: true
+  load_plugins: true
 
 platforms:
   - name: rhel-8
