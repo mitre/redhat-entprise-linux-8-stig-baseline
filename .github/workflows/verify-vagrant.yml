@@ -1,10 +1,10 @@
 name: Verify the Baseline using Vagrant
 
 on:
-  push:	
-    branches: [ main ]	
-  pull_request:	
-    branches: [ main ]	
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
   my-job:
@@ -15,7 +15,7 @@ jobs:
       KITCHEN_LOCAL_YAML: kitchen.vagrant.yml
     strategy:
       matrix:
-        suite: ['vanilla', 'hardened']
+        suite: ["vanilla", "hardened"]
       fail-fast: false
     steps:
       - name: Add jq for output formatting
@@ -25,7 +25,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '2.7'
+          ruby-version: "2.7"
       - name: Disable ri and rdoc
         run: 'echo "gem: --no-ri --no-rdoc" >> ~/.gemrc'
       - run: bundle install

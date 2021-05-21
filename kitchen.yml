@@ -1,5 +1,4 @@
 ---
-
 verifier:
   name: inspec
   sudo: true
@@ -11,17 +10,15 @@ verifier:
       path: .
   input_files:
     - kitchen.inputs.yml
-  load_plugins: true
+       load_plugins: true
 
 platforms:
   - name: rhel-8
 
 suites:
-  - name: hardened
-    provisioner:
-      playbook: spec/ansible/roles/rhel8STIG.yml
-      
   - name: vanilla
     provisioner:
       playbook: spec/ansible/roles/ansible-role-rhel-vanilla.yml
-      
+  - name: hardened
+    provisioner:
+      playbook: spec/ansible/roles/rhel8STIG.yml
