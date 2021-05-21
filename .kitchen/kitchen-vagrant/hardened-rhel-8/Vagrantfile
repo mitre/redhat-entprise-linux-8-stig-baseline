@@ -1,0 +1,20 @@
+Vagrant.configure("2") do |c|
+  c.berkshelf.enabled = false if Vagrant.has_plugin?("vagrant-berkshelf")
+  c.vm.box = "bento/centos-8"
+  c.vm.hostname = "hardened-rhel-8.vagrantup.com"
+  c.vm.synced_folder ".", "/vagrant", disabled: true
+  c.vm.synced_folder "/Users/wdower/.kitchen/cache", "/tmp/omnibus/cache", create: true
+  c.vm.provider :virtualbox do |p|
+    p.name = "kitchen-redhat-enterprise-linux-8-stig-baseline-hardened-rhel-8-0a0fef71-97f2-47e1-bb65-58a1d8c9e642"
+    p.customize ["modifyvm", :id, "--cpus", "4"]
+    p.customize ["modifyvm", :id, "--memory", "8192"]
+    p.customize ["modifyvm", :id, "--accelerate3d", "off"]
+    p.customize ["modifyvm", :id, "--accelerate2dvideo", "off"]
+    p.customize ["modifyvm", :id, "--audio", "none"]
+    p.customize ["modifyvm", :id, "--usbcardreader", "off"]
+    p.customize ["modifyvm", :id, "--vrde", "off"]
+    p.customize ["modifyvm", :id, "--usb", "off"]
+    p.customize ["modifyvm", :id, "--nictype1", "82540EM"]
+    p.customize ["modifyvm", :id, "--clipboard", "disabled"]
+  end
+end

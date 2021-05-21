@@ -1,0 +1,1 @@
+{"dependencies":[["vagrant-cachier",["= 1.2.1"]],["vagrant-certificates",["= 2.0.0"]],["vagrant-proxyconf",["= 2.0.10"]]],"checksum":"0c4872c74c5eef46570dd2756438c7e4670fecb3eac29db2b1a15fd9fc01071a","vagrant_version":"2.2.16"}

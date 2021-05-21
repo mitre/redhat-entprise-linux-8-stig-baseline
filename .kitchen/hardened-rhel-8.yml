@@ -1,0 +1,8 @@
+---
+last_error:
+my_id: hardened-rhel-8-1621633612
+last_action: verify
+hostname: 127.0.0.1
+port: '2200'
+username: vagrant
+ssh_key: "/Users/wdower/work/redhat-enterprise-linux-8-stig-baseline/.kitchen/kitchen-vagrant/hardened-rhel-8/.vagrant/machines/default/virtualbox/private_key"

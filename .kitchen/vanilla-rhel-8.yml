@@ -1,0 +1,7 @@
+---
+hostname: 127.0.0.1
+port: '2201'
+username: vagrant
+ssh_key: "/Users/wdower/work/redhat-enterprise-linux-8-stig-baseline/.kitchen/kitchen-vagrant/vanilla-rhel-8/.vagrant/machines/default/virtualbox/private_key"
+last_action: verify
+last_error:
