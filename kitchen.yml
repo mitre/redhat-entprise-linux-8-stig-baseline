@@ -1,0 +1,27 @@
+---
+
+verifier:
+  name: inspec
+  sudo: true
+  reporter:
+    - cli
+    - json:spec/results/%{platform}_%{suite}.json
+  inspec_tests:
+    - name: Red Hat 8 STIG
+      path: .
+  input_files:
+    - kitchen.inputs.yml
+  load_plugins: true
+
+platforms:
+  - name: rhel-8
+
+suites:
+  - name: hardened
+    provisioner:
+      playbook: spec/ansible/roles/rhel8STIG.yml
+      
+  - name: vanilla
+    provisioner:
+      playbook: spec/ansible/roles/ansible-role-rhel-vanilla.yml
+      
