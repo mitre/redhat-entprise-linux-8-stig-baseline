@@ -13,9 +13,6 @@ Latest versions and installation options are available at the [InSpec](http://in
 
 The following inputs may be configured in an inputs ".yml" file for the profile to run correctly for your specific environment. More information about InSpec inputs can be found in the [InSpec Profile Documentation](https://www.inspec.io/docs/reference/profiles/).
 
-```yaml
-```
-
 # Running This Baseline Directly from Github
 
 # How to run
